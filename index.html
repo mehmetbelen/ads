@@ -67,6 +67,12 @@
       padding: 12px 24px;
       border-radius: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .header-btn:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
     }
 
     main {
@@ -99,12 +105,21 @@
       display: grid;
       grid-template-columns: 110px 1fr;
       gap: 24px;
+      align-items: start;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
     }
 
     .app-icon-box {
       width: 110px;
       height: 110px;
       border-radius: 22px;
+      position: relative;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -115,6 +130,17 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       text-align: center;
       user-select: none;
+    }
+
+    .app-icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 22px;
+      z-index: 2;
     }
 
     .icon-logiword { background: linear-gradient(135deg, #4f46e5, #3730a3); }
@@ -182,11 +208,12 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 13px;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .play-btn:hover {
       background: #1e293b;
+      transform: translateY(-2px);
     }
 
     .play-btn svg {
@@ -208,6 +235,10 @@
       text-decoration: none;
       font-weight: 600;
       margin: 0 6px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 650px) {
@@ -240,7 +271,8 @@
       <!-- 1. LogiWord -->
       <article class="app-card">
         <div class="app-icon-box icon-logiword">
-          Logi<br>Word
+          <img src="logiword.png" alt="LogiWord" onerror="this.style.display='none'">
+          <span>Logi<br>Word</span>
         </div>
         <div class="app-content">
           <span class="app-tag tag-purple">Kelime & Bulmaca</span>
@@ -264,7 +296,8 @@
       <!-- 2. LogiNum -->
       <article class="app-card">
         <div class="app-icon-box icon-loginum">
-          Logi<br>Num
+          <img src="loginum.png" alt="LogiNum" onerror="this.style.display='none'">
+          <span>Logi<br>Num</span>
         </div>
         <div class="app-content">
           <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
@@ -288,7 +321,8 @@
       <!-- 3. Find Number -->
       <article class="app-card">
         <div class="app-icon-box icon-findnumber">
-          Find<br>Num
+          <img src="findnumber.png" alt="Find Number" onerror="this.style.display='none'">
+          <span>Find<br>Num</span>
         </div>
         <div class="app-content">
           <span class="app-tag tag-blue">Refleks & Odaklanma</span>
@@ -315,8 +349,7 @@
   <footer>
     <p>© 2026 Samsun Developer. Tüm hakları saklıdır.</p>
     <p style="margin-top: 6px;">
-      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play</a> • 
-      <a href="/app-ads.txt" target="_blank">app-ads.txt</a>
+      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play</a> •     
     </p>
   </footer>
 
