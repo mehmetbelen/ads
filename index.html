@@ -114,36 +114,38 @@
       box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
     }
 
+    /* İkon Alanı */
     .app-icon-box {
       width: 110px;
       height: 110px;
       border-radius: 22px;
-      position: relative;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 17px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-      text-align: center;
-      user-select: none;
+      background: #e2e8f0;
     }
 
     .app-icon-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 22px;
-      z-index: 2;
+      display: block;
     }
 
-    .icon-logiword { background: linear-gradient(135deg, #4f46e5, #3730a3); }
+    .icon-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 17px;
+      text-align: center;
+    }
+
     .icon-loginum { background: linear-gradient(135deg, #db2777, #9d174d); }
     .icon-findnumber { background: linear-gradient(135deg, #0284c7, #0369a1); }
 
@@ -234,7 +236,6 @@
       color: #4f46e5;
       text-decoration: none;
       font-weight: 600;
-      margin: 0 6px;
     }
 
     footer a:hover {
@@ -270,9 +271,8 @@
 
       <!-- 1. LogiWord -->
       <article class="app-card">
-        <div class="app-icon-box icon-logiword">
-          <img src="logiword.png" alt="LogiWord" onerror="this.style.display='none'">
-          <span>Logi<br>Word</span>
+        <div class="app-icon-box">
+          <img src="logiword.png" alt="LogiWord">
         </div>
         <div class="app-content">
           <span class="app-tag tag-purple">Kelime & Bulmaca</span>
@@ -295,9 +295,8 @@
 
       <!-- 2. LogiNum -->
       <article class="app-card">
-        <div class="app-icon-box icon-loginum">
-          <img src="loginum.png" alt="LogiNum" onerror="this.style.display='none'">
-          <span>Logi<br>Num</span>
+        <div class="app-icon-box">
+          <div class="icon-placeholder icon-loginum">Logi<br>Num</div>
         </div>
         <div class="app-content">
           <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
@@ -320,9 +319,8 @@
 
       <!-- 3. Find Number -->
       <article class="app-card">
-        <div class="app-icon-box icon-findnumber">
-          <img src="findnumber.png" alt="Find Number" onerror="this.style.display='none'">
-          <span>Find<br>Num</span>
+        <div class="app-icon-box">
+          <div class="icon-placeholder icon-findnumber">Find<br>Num</div>
         </div>
         <div class="app-content">
           <span class="app-tag tag-blue">Refleks & Odaklanma</span>
@@ -349,7 +347,7 @@
   <footer>
     <p>© 2026 Samsun Developer. Tüm hakları saklıdır.</p>
     <p style="margin-top: 6px;">
-      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play</a> •     
+      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play Geliştirici Sayfası</a>
     </p>
   </footer>
 
