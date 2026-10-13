@@ -9,8 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #4f46e5;
-      --primary-hover: #4338ca;
+      --primary: #6366f1;
       --bg-dark: #0f172a;
       --bg-light: #f8fafc;
       --card-bg: #ffffff;
@@ -32,13 +31,12 @@
       line-height: 1.6;
     }
 
-    /* Üst Başlık & Hero Alanı */
+    /* Üst Alan */
     header {
       background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
       color: #ffffff;
-      padding: 70px 20px 60px;
+      padding: 60px 20px 50px;
       text-align: center;
-      position: relative;
     }
 
     .dev-badge {
@@ -51,23 +49,21 @@
       border-radius: 999px;
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.5px;
       margin-bottom: 16px;
       color: #c7d2fe;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #94a3b8;
-      max-width: 620px;
-      margin: 0 auto 24px;
+      max-width: 600px;
+      margin: 0 auto 22px;
     }
 
     .header-btn {
@@ -81,122 +77,129 @@
       font-size: 14px;
       padding: 12px 24px;
       border-radius: 10px;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
     }
 
-    .header-btn:hover {
-      background: #f1f5f9;
-      transform: translateY(-2px);
-    }
-
-    /* Ana İçerik */
+    /* Ana Alan */
     main {
-      max-width: 1050px;
-      margin: -30px auto 60px;
+      max-width: 1000px;
+      margin: -25px auto 60px;
       padding: 0 20px;
     }
 
     .section-title {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 800;
       color: #0f172a;
       margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    /* Uygulama Vitrin Kartları */
     .apps-grid {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 24px;
     }
 
     .app-card {
       background: var(--card-bg);
-      border-radius: 20px;
+      border-radius: 18px;
       border: 1px solid var(--border-color);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      padding: 32px;
+      box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.04);
+      padding: 28px;
       display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 30px;
-      transition: all 0.3s ease;
+      grid-template-columns: 110px 1fr;
+      gap: 26px;
+      transition: all 0.2s ease;
     }
 
     .app-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.08);
-      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
     }
 
-    .app-icon-wrapper {
+    /* İkon Görünümü */
+    .app-icon-box {
+      width: 110px;
+      height: 110px;
+      border-radius: 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
     }
 
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 24px;
+    .app-icon-box img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      background-color: #e2e8f0;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
+
+    /* Farklı Uygulamalar İçin Renk Gradyanları */
+    .icon-logiword { background: linear-gradient(135deg, #6366f1, #4338ca); }
+    .icon-loginum { background: linear-gradient(135deg, #ec4899, #be185d); }
+    .icon-findnumber { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
 
     .app-content h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .app-tag {
       display: inline-block;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      color: var(--primary);
-      background: #e0e7ff;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-bottom: 12px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
+    .tag-purple { background: #e0e7ff; color: #4338ca; }
+    .tag-pink { background: #fce7f3; color: #be185d; }
+    .tag-blue { background: #e0f2fe; color: #0369a1; }
+
     .app-description {
-      font-size: 15px;
+      font-size: 14.5px;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .features-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      margin-bottom: 24px;
+      gap: 8px;
+      margin-bottom: 20px;
     }
 
     .features-list li {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       color: #334155;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .features-list li::before {
       content: "✓";
       color: #10b981;
       font-weight: 800;
-      font-size: 14px;
     }
 
-    /* Google Play İndirme Butonu */
+    /* Google Play Butonu */
     .play-btn {
       display: inline-flex;
       align-items: center;
@@ -204,42 +207,19 @@
       background: #000000;
       color: #ffffff;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 10px;
+      padding: 10px 18px;
+      border-radius: 8px;
       font-weight: 600;
-      font-size: 14px;
-      transition: background 0.2s ease, transform 0.2s ease;
+      font-size: 13px;
     }
 
-    .play-btn:hover {
-      background: #1e293b;
-      transform: translateY(-2px);
-    }
+    .play-btn svg { width: 20px; height: 20px; }
 
-    .play-btn svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .play-btn-text small {
-      display: block;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #94a3b8;
-      font-weight: 500;
-    }
-
-    .play-btn-text span {
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    /* Alt Bilgi (Footer) */
+    /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
       background: #ffffff;
-      padding: 30px 20px;
+      padding: 24px 20px;
       text-align: center;
       color: var(--text-muted);
       font-size: 13px;
@@ -249,120 +229,110 @@
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
-      margin: 0 8px;
+      margin: 0 6px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Mobil Uyumluluk */
-    @media (max-width: 680px) {
+    @media (max-width: 650px) {
       .app-card {
         grid-template-columns: 1fr;
         text-align: center;
-        padding: 24px;
       }
-
-      .app-icon-wrapper {
-        margin-bottom: 8px;
-      }
-
-      .features-list {
-        text-align: left;
-      }
-
-      .play-btn {
-        width: 100%;
-        justify-content: center;
-      }
+      .app-icon-box { margin: 0 auto; }
+      .features-list { text-align: left; }
+      .play-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="dev-badge">
-      <span>●</span> Google Play Resmi Geliştirici Sayfası
-    </div>
-    <h1>Samsun Developer Stüdyosu</h1>
-    <p>Zihninizi geliştiren kelime bulmacaları, hafıza ve odaklanma oyunları ile pratik ve eğlenceli Android uygulamaları.</p>
+    <div class="dev-badge">● Google Play Geliştirici Sayfası</div>
+    <h1>Samsun Geliştirici Stüdyosu</h1>
+    <p>Zihninizi zorlayan, mantık ve dikkatinizi geliştiren eğlenceli Android oyun ve uygulamaları.</p>
     <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="header-btn">
-      Google Play Mağazamızı Ziyaret Edin
+      Google Play Mağazamızı Aç
     </a>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <div class="section-title">
-      <span>📱</span> Yayınlanan Uygulama ve Oyunlarımız
-    </div>
+    <div class="section-title">📱 Oyun ve Uygulamalarımız</div>
 
     <div class="apps-grid">
 
-      <!-- 1. Uygulama: LogiWord -->
+      <!-- 1. LogiWord -->
       <article class="app-card">
-        <div class="app-icon-wrapper">
-          <img 
-            src="https://play-lh.googleusercontent.com/placeholder" 
-            onerror="this.src='https://dummyimage.com/240x240/4f46e5/ffffff&text=LogiWord'"
-            alt="LogiWord: Kelime & Dil Öğren İkonu" 
-            class="app-icon">
+        <div class="app-icon-box icon-logiword">
+          <!-- Kendi ikonunuzu reponuza logiword.png adıyla yüklerseniz otomatik görünür -->
+          <img src="logiword.png" alt="LogiWord" onerror="this.style.display='none'">
+          <span>Logi<br>Word</span>
         </div>
         <div class="app-content">
-          <span class="app-tag">Eğitici • Kelime & Zeka Oyunu</span>
+          <span class="app-tag tag-purple">Kelime & Bulmaca</span>
           <h2>LogiWord: Kelime & Dil Öğren</h2>
           <p class="app-description">
-            Kelime dağarcığınızı geliştirirken zihninizi canlı tutun! Farklı seviyelerdeki bulmacalar ve etkileşimli oyun modları sayesinde hem yeni kelimeler keşfedin hem de dil öğrenme sürecinizi keyifli bir alışkanlığa dönüştürün.
+            Kelime dağarcığınızı geliştirirken zihninizi canlı tutun! Farklı seviyelerdeki bulmacalar ve etkileşimli oyun modları sayesinde dil öğrenme sürecinizi keyifli bir alışkanlığa dönüştürün.
           </p>
           <ul class="features-list">
             <li>Geniş kelime haznesi ve seviye sistemi</li>
             <li>Akıcı, sade ve modern arayüz tasarımı</li>
             <li>Hafıza güçlendirici günlük pratikler</li>
-            <li>Çevrimdışı (internetsiz) oynama desteği</li>
+            <li>İnternetsiz oynama desteği</li>
           </ul>
           <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/>
-            </svg>
-            <div class="play-btn-text">
-              <small>Hemen İndir</small>
-              <span>Google Play'den Alın</span>
-            </div>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+            Google Play'den İndir
           </a>
         </div>
       </article>
 
-      <!-- 2. Uygulama: Find Number -->
+      <!-- 2. LogiNum -->
       <article class="app-card">
-        <div class="app-icon-wrapper">
-          <img 
-            src="https://play-lh.googleusercontent.com/placeholder" 
-            onerror="this.src='https://dummyimage.com/240x240/0ea5e9/ffffff&text=Find+Number'"
-            alt="Find Number İkonu" 
-            class="app-icon">
+        <div class="app-icon-box icon-loginum">
+          <!-- Kendi ikonunuzu reponuza loginum.png adıyla yüklerseniz otomatik görünür -->
+          <img src="loginum.png" alt="LogiNum" onerror="this.style.display='none'">
+          <span>Logi<br>Num</span>
         </div>
         <div class="app-content">
-          <span class="app-tag">Refleks • Sayı & Odaklanma Oyunu</span>
-          <h2>Find Number</h2>
+          <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
+          <h2>LogiNum - Sayı ve Mantık Bulmacası</h2>
           <p class="app-description">
-            Sayıların dünyasında dikkatinizi ve hızınızı test edin! Karışık sayılar arasında doğru kombinasyonları en kısa sürede bularak zamana karşı yarışın, konsantrasyonunuzu artırın ve rekorlarınızı kırın.
+            Sayıların gizemli dünyasında zekanızı ve mantığınızı test edin! Modern neon tasarımı ve sürükleyici atmosferiyle sayıların arasındaki mantığı çözün, zihninizi keskin tutun.
           </p>
           <ul class="features-list">
-            <li>Hızlı düşünme ve dikkat geliştirme testleri</li>
-            <li>Zamana karşı heyecanlı oyun modları</li>
-            <li>Her yaştan oyuncu için sade tasarım</li>
-            <li>Hızlı açılan, hafif ve optimize oyun yapısı</li>
+            <li>Modern neon grafikler ve akıcı oynanış</li>
+            <li>Zorlayıcı mantık bulmacaları ve seviyeler</li>
+            <li>Beyin jimnastiği ve odaklanma egzersizleri</li>
+            <li>Liderlik tablosu ve rekor hedefleri</li>
           </ul>
           <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/>
-            </svg>
-            <div class="play-btn-text">
-              <small>Hemen İndir</small>
-              <span>Google Play'den Alın</span>
-            </div>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+            Google Play'den İndir
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Find Number -->
+      <article class="app-card">
+        <div class="app-icon-box icon-findnumber">
+          <!-- Kendi ikonunuzu reponuza findnumber.png adıyla yüklerseniz otomatik görünür -->
+          <img src="findnumber.png" alt="Find Number" onerror="this.style.display='none'">
+          <span>Find<br>Num</span>
+        </div>
+        <div class="app-content">
+          <span class="app-tag tag-blue">Refleks & Odaklanma</span>
+          <h2>Find Number</h2>
+          <p class="app-description">
+            Karışık sayılar arasında doğru kombinasyonları en hızlı şekilde bulun! Zamana karşı yarışarak dikkatinizi toplayın, reflekslerinizi güçlendirin ve yüksek skorları hedefleyin.
+          </p>
+          <ul class="features-list">
+            <li>Hızlı düşünme ve dikkat testleri</li>
+            <li>Zamana karşı heyecanlı oyun yapısı</li>
+            <li>Her yaştan oyuncuya uygun sade arayüz</li>
+            <li>Hafif ve hızlı çalışan oyun motoru</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+            Google Play'den İndir
           </a>
         </div>
       </article>
@@ -370,12 +340,11 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 Samsun Developer. Tüm hakları saklıdır.</p>
-    <p style="margin-top: 8px;">
-      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play Profili</a> • 
-      <a href="/app-ads.txt" target="_blank">app-ads.txt Doğrulama Dosyası</a>
+    <p style="margin-top: 6px;">
+      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play</a> • 
+      <a href="/app-ads.txt" target="_blank">app-ads.txt</a>
     </p>
   </footer>
 
