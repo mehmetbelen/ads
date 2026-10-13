@@ -114,20 +114,26 @@
       box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
     }
 
-    /* İkon Alanı */
-    .app-icon-box {
+    /* Tıklanabilir İkon Alanı */
+    .app-icon-link {
+      display: block;
       width: 110px;
       height: 110px;
       border-radius: 22px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       background: #e2e8f0;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .app-icon-box img {
+    .app-icon-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .app-icon-link img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -247,7 +253,7 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
-      .app-icon-box { margin: 0 auto; }
+      .app-icon-link { margin: 0 auto; }
       .features-list { text-align: left; }
       .play-btn { width: 100%; justify-content: center; }
     }
@@ -271,9 +277,9 @@
 
       <!-- 1. LogiWord -->
       <article class="app-card">
-        <div class="app-icon-box">
+        <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="app-icon-link" title="LogiWord'ü Google Play'de Aç">
           <img src="logiword.png" alt="LogiWord">
-        </div>
+        </a>
         <div class="app-content">
           <span class="app-tag tag-purple">Kelime & Bulmaca</span>
           <h2>LogiWord: Kelime & Dil Öğren</h2>
@@ -295,9 +301,9 @@
 
       <!-- 2. LogiNum -->
       <article class="app-card">
-        <div class="app-icon-box">
+        <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="app-icon-link" title="LogiNum'u Google Play'de Aç">
           <div class="icon-placeholder icon-loginum">Logi<br>Num</div>
-        </div>
+        </a>
         <div class="app-content">
           <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
           <h2>LogiNum - Sayı ve Mantık Bulmacası</h2>
@@ -319,9 +325,9 @@
 
       <!-- 3. Find Number -->
       <article class="app-card">
-        <div class="app-icon-box">
+        <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="app-icon-link" title="Find Number'ı Google Play'de Aç">
           <div class="icon-placeholder icon-findnumber">Find<br>Num</div>
-        </div>
+        </a>
         <div class="app-content">
           <span class="app-tag tag-blue">Refleks & Odaklanma</span>
           <h2>Find Number</h2>
