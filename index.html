@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samsun Developer | Mobil Oyunlar ve Uygulamalar</title>
+  <title>Samsun Developer | Mobil & PC Oyun ve Uygulamaları</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -55,6 +55,13 @@
       margin: 0 auto 20px;
     }
 
+    .header-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .header-btn {
       display: inline-flex;
       align-items: center;
@@ -64,7 +71,7 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 14px;
-      padding: 12px 24px;
+      padding: 12px 22px;
       border-radius: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
       transition: background 0.2s ease, transform 0.2s ease;
@@ -114,7 +121,7 @@
       box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
     }
 
-    /* Tıklanabilir İkon Alanı */
+    /* İkon Kutusu */
     .app-icon-link {
       display: block;
       width: 110px;
@@ -161,19 +168,26 @@
     .icon-loginum { background: linear-gradient(135deg, #db2777, #9d174d); }
     .icon-findnumber { background: linear-gradient(135deg, #0284c7, #0369a1); }
 
+    .tag-container {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
     .app-tag {
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
       padding: 3px 8px;
       border-radius: 5px;
-      margin-bottom: 8px;
       text-transform: uppercase;
     }
 
     .tag-purple { background: #e0e7ff; color: #4338ca; }
     .tag-pink { background: #fce7f3; color: #9d174d; }
     .tag-blue { background: #e0f2fe; color: #0369a1; }
+    .tag-ms { background: #e0f2fe; color: #0284c7; }
 
     .app-content h2 {
       font-size: 1.35rem;
@@ -211,28 +225,48 @@
       font-weight: 800;
     }
 
-    .play-btn {
+    /* İndirme Butonları Alanı */
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .store-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: #000000;
-      color: #ffffff;
+      gap: 8px;
       text-decoration: none;
-      padding: 10px 18px;
+      padding: 10px 16px;
       border-radius: 8px;
       font-weight: 600;
       font-size: 13px;
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .play-btn:hover {
-      background: #1e293b;
+    .store-btn:hover {
       transform: translateY(-2px);
     }
 
-    .play-btn svg {
-      width: 20px;
-      height: 20px;
+    .store-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-playstore {
+      background: #000000;
+      color: #ffffff;
+    }
+    .btn-playstore:hover {
+      background: #1e293b;
+    }
+
+    .btn-msstore {
+      background: #0078d4;
+      color: #ffffff;
+    }
+    .btn-msstore:hover {
+      background: #0063b1;
     }
 
     footer {
@@ -260,49 +294,67 @@
         text-align: center;
       }
       .app-icon-link { margin: 0 auto; }
+      .tag-container { justify-content: center; }
       .features-list { text-align: left; }
-      .play-btn { width: 100%; justify-content: center; }
+      .button-group { justify-content: center; }
+      .store-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="dev-badge">● Google Play Geliştirici Sayfası</div>
+    <div class="dev-badge">● Mobil & PC Geliştirici Stüdyosu</div>
     <h1>Samsun Geliştirici Stüdyosu</h1>
-    <p>Zihninizi zorlayan, mantık ve dikkatinizi geliştiren eğlenceli Android oyun ve uygulamaları.</p>
-    <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="header-btn">
-      Tüm Mağazamızı İnceleyin
-    </a>
+    <p>Zihninizi zorlayan, mantık ve dikkatinizi geliştiren eğlenceli Android ve Windows oyunları.</p>
+    <div class="header-links">
+      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank" class="header-btn">
+        Google Play Mağazası
+      </a>
+      <a href="https://apps.microsoft.com/detail/9mwlpln85rm2?hl=tr-TR&gl=TR" target="_blank" class="header-btn">
+        Microsoft Store Sayfası
+      </a>
+    </div>
   </header>
 
   <main>
-    <div class="section-title">📱 Tüm Oyun ve Uygulamalarımız (3)</div>
+    <div class="section-title">🎮 Oyun ve Uygulamalarımız</div>
 
     <div class="apps-grid">
 
-      <!-- 1. LogiWord -->
+      <!-- 1. LogiWord (Google Play & Güncellenmiş Microsoft Store TR Linki) -->
       <article class="app-card">
-        <a href="https://play.google.com/store/apps/details?id=com.logiword.vocabularypuzzle" target="_blank" class="app-icon-link" title="LogiWord'ü Google Play'de Aç">
+        <a href="https://play.google.com/store/apps/details?id=com.logiword.vocabularypuzzle" target="_blank" class="app-icon-link" title="LogiWord Mağaza Sayfası">
           <img src="logiword.png" alt="LogiWord" onerror="this.style.display='none'">
           <div class="icon-placeholder icon-logiword">Logi<br>Word</div>
         </a>
         <div class="app-content">
-          <span class="app-tag tag-purple">Kelime & Bulmaca</span>
+          <div class="tag-container">
+            <span class="app-tag tag-purple">Kelime & Bulmaca</span>
+            <span class="app-tag tag-ms">Windows & Android</span>
+          </div>
           <h2>LogiWord: Kelime & Dil Öğren</h2>
           <p class="app-description">
-            Kelime dağarcığınızı geliştirirken zihninizi canlı tutun! Farklı seviyelerdeki bulmacalar ve etkileşimli modlarla dil öğrenme sürecinizi keyifli hale getirin.
+            Kelime dağarcığınızı geliştirirken zihninizi canlı tutun! Farklı seviyelerdeki bulmacalar ve etkileşimli modlarla dil öğrenme sürecinizi keyifli hale getirin. Şimdi hem mobil cihazlarda hem de Windows masaüstünde oynanabilir.
           </p>
           <ul class="features-list">
             <li>Geniş kelime haznesi ve seviye sistemi</li>
-            <li>Akıcı, sade ve modern arayüz</li>
+            <li>Windows PC ve Android için optimize arayüz</li>
             <li>Hafıza güçlendirici günlük pratikler</li>
-            <li>İnternetsiz oynama desteği</li>
+            <li>İnternetsiz (offline) oynama desteği</li>
           </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.logiword.vocabularypuzzle" target="_blank" class="play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
-            Google Play'den İndir
-          </a>
+          <div class="button-group">
+            <!-- Google Play Butonu -->
+            <a href="https://play.google.com/store/apps/details?id=com.logiword.vocabularypuzzle" target="_blank" class="store-btn btn-playstore">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+              Google Play'den İndir
+            </a>
+            <!-- Microsoft Store Butonu (Güncel Link) -->
+            <a href="https://apps.microsoft.com/detail/9mwlpln85rm2?hl=tr-TR&gl=TR" target="_blank" class="store-btn btn-msstore">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 2.25L10.5 3.5V11.25H1.5V2.25ZM1.5 12.75H10.5V20.5L1.5 21.75V12.75ZM12 3.7L22.5 2.25V11.25H12V3.7ZM12 12.75H22.5V21.75L12 20.3V12.75Z"/></svg>
+              Microsoft Store'dan İndir
+            </a>
+          </div>
         </div>
       </article>
 
@@ -313,7 +365,10 @@
           <div class="icon-placeholder icon-loginum">Logi<br>Num</div>
         </a>
         <div class="app-content">
-          <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
+          <div class="tag-container">
+            <span class="app-tag tag-pink">Mantık & Sayı Bulmacası</span>
+            <span class="app-tag tag-purple">Android</span>
+          </div>
           <h2>LogiNum - Sayı ve Mantık Bulmacası</h2>
           <p class="app-description">
             Sayıların dünyasında zekanızı ve analitik düşünme becerinizi test edin! Odaklanma gerektiren mantık dizilimlerini çözün, rekorlarınızı geliştirin.
@@ -324,10 +379,12 @@
             <li>Göz yormayan şık ve sade tasarım</li>
             <li>Hızlı düşünme ve hafıza gelişimi</li>
           </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.loginum.logicanumberpuzzle" target="_blank" class="play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
-            Google Play'den İndir
-          </a>
+          <div class="button-group">
+            <a href="https://play.google.com/store/apps/details?id=com.loginum.logicanumberpuzzle" target="_blank" class="store-btn btn-playstore">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+              Google Play'den İndir
+            </a>
+          </div>
         </div>
       </article>
 
@@ -338,7 +395,10 @@
           <div class="icon-placeholder icon-findnumber">Find<br>Num</div>
         </a>
         <div class="app-content">
-          <span class="app-tag tag-blue">Refleks & Odaklanma</span>
+          <div class="tag-container">
+            <span class="app-tag tag-blue">Refleks & Odaklanma</span>
+            <span class="app-tag tag-purple">Android</span>
+          </div>
           <h2>Find Number</h2>
           <p class="app-description">
             Karışık sayılar arasında doğru hedefleri en kısa sürede bulun! Reflekslerinizi güçlendirin, zamana karşı yarışarak dikkatinizi en üst seviyeye çıkarın.
@@ -349,10 +409,12 @@
             <li>Her yaş grubuna uygun sade arayüz</li>
             <li>Hafif ve hızlı çalışan oyun motoru</li>
           </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.tytayt.sayibulmaca" target="_blank" class="play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
-            Google Play'den İndir
-          </a>
+          <div class="button-group">
+            <a href="https://play.google.com/store/apps/details?id=com.tytayt.sayibulmaca" target="_blank" class="store-btn btn-playstore">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.59 1.59 0 0 1-.61-.926V2.74c.05-.33.27-.67.61-.926zm11.3 9.072l2.36-2.36L5.59 1.82a1.44 1.44 0 0 0-.87-.27l10.19 9.336zm0 2.228l-10.19 9.34c.26 0 .58-.09.87-.27l11.68-6.71-2.36-2.36zm1.12-1.114l2.88 1.66c.92.53.92 1.4 0 1.93l-2.88 1.66-2.22-2.22 2.22-3.03z"/></svg>
+              Google Play'den İndir
+            </a>
+          </div>
         </div>
       </article>
 
@@ -362,7 +424,7 @@
   <footer>
     <p>© 2026 Samsun Developer. Tüm hakları saklıdır.</p>
     <p style="margin-top: 6px;">
-      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play Geliştirici Sayfası</a>
+      <a href="https://play.google.com/store/apps/developer?id=samsun" target="_blank">Google Play Profili</a>
     </p>
   </footer>
 
